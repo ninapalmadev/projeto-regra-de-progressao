@@ -6,7 +6,6 @@ import java.util.Scanner;
  * App.
  */
 public class App {
-
   /**
    * Metodo main.
    */
@@ -34,9 +33,26 @@ public class App {
     for (int somaPeso : pesos) {
       total += somaPeso;
     }
-
-    if (total != 100){
+    if (total != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
+    }
+    double somaNotas = 0;
+    double somaPesos = 0;
+
+    for (int i = 0; i < notas.length; i++) {
+      somaNotas += notas[i] * pesos[i];
+      somaPesos += pesos[i];
+    }
+
+    double resultado = somaNotas / somaPesos;
+
+    if (resultado >= 85) {
+      System.out.println("Parabéns! Você alcançou " + resultado + "%! E "
+          + "temos o prazer de informar que você obteve aprovação");
+    } else {
+      System.out.println("Lamentamos informar que, com base na sua "
+          + "pontuação alcançada neste período, " + resultado + "%, você não "
+          + "atingiu a pontuação mínima necessária para sua aprovação.");
     }
     scanner.close();
   }
