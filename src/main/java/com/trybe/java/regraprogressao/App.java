@@ -29,6 +29,15 @@ public class App {
       System.out.println("Digite a nota obtida para " + atividades[i] + ": ");
       notas[i] = scanner.nextInt();
     }
+
+    int total = 0;
+    for (int somaPeso : pesos) {
+      total += somaPeso;
+    }
+
+    if (total != 100){
+      System.out.println("A soma dos pesos é diferente de 100!");
+    }
     scanner.close();
   }
 }
