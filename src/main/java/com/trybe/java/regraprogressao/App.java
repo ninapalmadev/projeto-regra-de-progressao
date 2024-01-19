@@ -18,6 +18,7 @@ public class App {
 
     String[] atividades = new String[qtdAtividades];
     int[] pesos = new int[qtdAtividades];
+    int[] notas = new int[qtdAtividades];
 
     for (int i = 0; i < qtdAtividades; i += 1) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ": ");
@@ -25,6 +26,8 @@ public class App {
       atividades[i] = scanner.nextLine();
       System.out.println("Digite o peso da atividade " + (i + 1) + ": ");
       pesos[i] = scanner.nextInt();
+      System.out.println("Digite a nota obtida para " + atividades[i] + ": ");
+      notas[i] = scanner.nextInt();
     }
     scanner.close();
   }
